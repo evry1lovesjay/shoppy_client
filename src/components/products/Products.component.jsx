@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Product from "../product/Product.component"
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { API_URL } from "../requestMethods"
 import axios from 'axios';
 
 const Container = styled.div`
@@ -22,7 +23,9 @@ const Products = ({cat, filters, sort}) => {
   useEffect(()=>{
     const getProducts = async ()=>{
       try {
-        const res = await axios.get(cat ? `http://localhost:7000/api/products?category=${cat}` : "http://localhost:7000/api/products")
+        // const res = await axios.get(cat ? `http://localhost:7000/api/products?category=${cat}` : "http://localhost:7000/api/products")
+        // const res = await axios.get(cat ? `https://shoppy-api-m4i9.onrender.com/api/products?category=${cat}` : "https://shoppy-api-m4i9.onrender.com/api/products")
+        const res = await axios.get(cat ? `${API_URL}/api/products?category=${cat}` : `${API_URL}/api/products`)
         setProducts(res.data)
       } catch (error) {
         
