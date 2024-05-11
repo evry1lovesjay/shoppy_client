@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Product from "../product/Product.component"
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { API_URL } from "../requestMethods"
+// import { API_URL } from "../requestMethods"
 import axios from 'axios';
 
 const Container = styled.div`
