@@ -24,8 +24,8 @@ const Products = ({cat, filters, sort}) => {
     const getProducts = async ()=>{
       try {
         // const res = await axios.get(cat ? `http://localhost:7000/api/products?category=${cat}` : "http://localhost:7000/api/products")
-        // const res = await axios.get(cat ? `https://shoppy-api-m4i9.onrender.com/api/products?category=${cat}` : "https://shoppy-api-m4i9.onrender.com/api/products")
-        const res = await axios.get(cat ? `${API_URL}/api/products?category=${cat}` : `${API_URL}/api/products`)
+        const res = await axios.get(cat ? `https://shoppy-api-m4i9.onrender.com/api/products?category=${cat}` : "https://shoppy-api-m4i9.onrender.com/api/products")
+        // const res = await axios.get(cat ? `${API_URL}/api/products?category=${cat}` : `${API_URL}/api/products`)
         setProducts(res.data)
       } catch (error) {
         
